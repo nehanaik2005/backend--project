@@ -1,20 +1,12 @@
+// src/index.js
 import mongoose from "mongoose";
-import express from "express";
 import dotenv from "dotenv";
-
+import app from "./app.js";
 import { dbname } from "./constants.js";
 
-dotenv.config({ path: "../.env" }); // ✅ correct
-
-const app = express();
-
-// middlewares
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+dotenv.config({ path: "../.env" });
 
 console.log("MONGO URL:", process.env.MONGODB_URL);
-
 
 async function connectDB() {
   try {
