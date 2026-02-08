@@ -7,4 +7,4 @@ const handler=(fn) =>{
 
 
 
-export {handler}
+export default handler;
